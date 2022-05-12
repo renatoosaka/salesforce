@@ -6,7 +6,7 @@ $(function () {
   })
 
   $("#get").click(function () {
-    alert(dencrypt(Cookie.get("sf-user")))
+    alert(decrypt(Cookie.get("sf-user")))
   })  
 
   $("#del").click(function () {
