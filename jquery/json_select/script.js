@@ -1,11 +1,23 @@
 $(function () {
-  const profile = {
-    name: "Renato Hideki Osaka",
-    email: "renatoosaka@ioasys.com.br",
-    company: "ioasys"
-  }
+  const profiles = [
+    {
+      name: "Renato Hideki Osaka",
+      email: "renatoosaka@ioasys.com.br"
+    },
+    {
+      name: "Fulano",
+      email: "fulano@ioasys.com.br"
+    },
+    {
+      name: "Ciclano",
+      email: "ciclano@ioasys.com.br"
+    }
+  ]
 
-  $("#profile").append(`<p>${profile.name}</p>`)
-  $("#profile").append(`<p>${profile.email}</p>`)
-  $("#profile").append(`<p>${profile.company}</p>`)
+  $.each(profiles, function(i, item) {
+    $("#select").append($("<option>", {
+      value: item.email,
+      text: item.name
+    }))
+  })
 });
