@@ -1,7 +1,10 @@
 const server = require('server');
 
 server.get('Show', function (req, res, next) {
-  render('show')
+  const productMgr = require('dw/catalog/ProductMgr');
+  const product = productMgr.getProduct('product-1');
+
+  render('show', { product: product })
   next()
 })
 

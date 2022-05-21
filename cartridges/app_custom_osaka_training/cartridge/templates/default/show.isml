@@ -7,5 +7,6 @@
   </head>
   <body>
     <h1>Osaka Training Sprint 2</h1>
+    <h3>${pdict.product.name}</h3>
   </body>
 </html>
