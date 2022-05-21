@@ -10,6 +10,7 @@
 
     <isloop items="${products}" var="product" status="loopstatus">
       <isinclude template="product.isml"/>
+      <isinclude template="${URLUtils.url('Main-Basket')}"/>
     </isloop>
   </body>
 </html>
