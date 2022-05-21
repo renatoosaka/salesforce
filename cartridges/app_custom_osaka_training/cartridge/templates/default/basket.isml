@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <isloop items="${pdict.products}" var="product" status="loopstatus">
+    <isset scope="page" name="products" value="${pdict.products}" />
+
+    <isloop items="${products}" var="product" status="loopstatus">
       <strong>${product.name}</strong>   
     </isloop>
   </body>
