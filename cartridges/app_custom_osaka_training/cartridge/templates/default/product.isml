@@ -6,11 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
-    <strong>${product.name}</strong>
-    <isif condition="${product.online}">
-        <span>Online</span>
-      <iselse/>
-        <span>Offline</span>
+    <isif condition="${empty(product.name)}">
+      <span>No product</span>
+    <iselse/>
+      <strong>${product.name}</strong>
+      <isif condition="${product.online}">
+          <span>Online</span>
+        <iselse/>
+          <span>Offline</span>
+      </isif>        
     </isif>
   </body>
 </html>
