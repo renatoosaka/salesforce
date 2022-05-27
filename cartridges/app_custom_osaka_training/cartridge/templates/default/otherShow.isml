@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <title></title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-
-<body>
-  <h1>Osaka Training Sprint 2</h1>
-  <em>Other Controller</em>
-  
-  <isloop items="${pdict.products}" var="product" status="loopstatus">
-    <isinclude template="product.isml" />
-  </isloop>
-</body>
-
-</html>
+  <isdecorate template="common/layout/page">
+    <h1>Osaka Training Sprint 2</h1>
+    <em>Other Controller</em>
+    <br />
+    <isloop items="${pdict.products}" var="product" status="loopstatus">
+      <isinclude template="product.isml" />
+      <br />
+    </isloop>
+  </isdecorate>

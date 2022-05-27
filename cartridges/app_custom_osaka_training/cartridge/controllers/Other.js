@@ -2,9 +2,9 @@ const server = require('server');
 
 server.get('Show', function (req, res, next) {
   const CatalogMgr = require('dw/catalog/CatalogMgr');
-  const category = CatalogMgr.getCategory('category-1') 
+  const category = CatalogMgr.getCategory('womens-jewelry-earrings') 
   const products = category.getProducts()
-  render('otherShow', { products: products })
+  res.render('otherShow', { products: products })
   next()
 })
 
